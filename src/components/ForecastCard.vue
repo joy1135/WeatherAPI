@@ -21,9 +21,7 @@ export default {
 .weather-card { 
  
     border: 3px solid white; 
-    padding: 10px; 
-    margin: 10px; 
-    width: 200px; 
+    width: 100px; 
     height: auto; 
     z-index: 10; 
     overflow: hidden; 

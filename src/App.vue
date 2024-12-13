@@ -272,7 +272,7 @@ p {
   padding: 10px;
   border-radius: 15px;
   padding-bottom: 20px;
-  width: 500px;
+  max-width: 500px;
   margin: 0;
 }
 
@@ -339,10 +339,24 @@ p {
   color: white;
 }
 
-.forecast {
-  display: flex;
-  flex-direction: row;
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   
 }
+
+.forecast {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.time {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
 
 .button {
   margin-top: 20px;
@@ -357,5 +371,70 @@ p {
 .button:hover {
   background-color: rgb(84, 203, 84);
 }
+
+@media (max-width: 768px) {
+  .forecast-container {
+    padding: 5px;
+  }
+  .time {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .forecast {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+.temp {
+  font-size: 22px;
+}
+
+.select {
+  font-size: 22px;
+}
+.sitch-temp {
+  font-size: 18px;
+}
+h1 {
+  font-size: 30px;
+}
+
+
+}
+
+@media (max-width: 480px) {
+  .time {
+    font-size: 1rem;
+  }
+  .forecast {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  .temp {
+  font-size: 18px;
+}
+
+.select {
+  font-size: 18px;
+}
+.sitch-temp {
+  font-size: 14px;
+}
+h1 {
+  font-size: 26px;
+}
+
+body {
+  gap: 20px;
+  flex-direction: column;
+}
+
+}
+
+@media (max-width: 380px) {
+  .forecast {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 
 </style>
