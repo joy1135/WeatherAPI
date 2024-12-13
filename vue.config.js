@@ -5,6 +5,6 @@ module.exports = defineConfig({
 
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/your-repo-name/' // Замените на имя вашего репозитория
+    ? '/WeatherAPI/' // Замените на имя вашего репозитория
     : '/'
 }
