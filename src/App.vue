@@ -219,7 +219,7 @@ export default {
         return;
       }
       const [lat, lon] = lat_lon.split(",");
-      fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=514682b9f2f21da6f8b153944b16896d&units=metric&lang=ru`)
+      fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=514682b9f2f21da6f8b153944b16896d&units=metric&lang=ru`)
         .then(data => data.json())
         .then(data => {
           this.weatherForecastData = data;
