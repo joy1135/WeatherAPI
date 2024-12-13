@@ -193,6 +193,8 @@ export default {
     .then(resp=>resp.json())
     .then(json=>{
       this.weather_data=json;
+      this.temp = this.weather_data.main.temp;
+      this.feels_like = this.weather_data.main.feels_like;
     });
     },
     upper(){
